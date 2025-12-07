@@ -16,7 +16,7 @@ const sidebarItems = [
     {
         title: "Components",
         items: [
-            { title: "All Components", href: "/docs/components" },
+            { title: "Accordion", href: "/docs/components/accordion" },
             { title: "Button", href: "/docs/components/button" },
             { title: "Card", href: "/docs/components/card" },
             { title: "Input", href: "/docs/components/input" },
