@@ -65,7 +65,6 @@ export default function TooltipPage() {
             <div className="space-y-4">
                 <h2 className="text-2xl font-bold border-b-2 border-border pb-2">Features</h2>
                 <ul className="list-disc list-inside space-y-2 text-neutral-600">
-                    <li><strong>Dark theme:</strong> Black background with white text for contrast</li>
                     <li><strong>Smart positioning:</strong> Automatically adjusts side (top/bottom/left/right)</li>
                     <li><strong>Hover trigger:</strong> Appears on hover, disappears on blur</li>
                     <li><strong>Animated:</strong> Smooth fade-in and zoom animation</li>

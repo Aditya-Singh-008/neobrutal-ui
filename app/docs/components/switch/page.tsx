@@ -104,7 +104,6 @@ export default function SwitchPage() {
             <div className="space-y-4">
                 <h2 className="text-2xl font-bold border-b-2 border-border pb-2">Use Cases</h2>
                 <ul className="list-disc list-inside space-y-2 text-neutral-600">
-                    <li>Dark mode toggle</li>
                     <li>Feature flags and settings</li>
                     <li>Notifications preferences</li>
                     <li>On/off controls for system features</li>

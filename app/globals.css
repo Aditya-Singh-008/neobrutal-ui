@@ -20,13 +20,18 @@
 
 :root {
   color-scheme: light;
-  --main: #88aaee;
+  --main: #B6ACE4;
+  --secondary: #FED170;
+  --soft-pink: #ffc1c6;
+  --soft-green: #Abcf82;
+  --tomato: #ff552e;
+  --cyan: #22d2ed;
   --overlay: rgba(0, 0, 0, 0.8);
   --bg: #f4f4f5;
   --bw: #ffffff;
   --blank: #ffffff;
-  --text: #09090b;
-  --mtext: #09090b;
+  --text: #0a0a0a;
+  --mtext: #0a0a0a;
   --border: #000000;
   --ring: #000000;
   --ring-offset: #ffffff;
@@ -39,7 +44,7 @@
   --secondary: var(--bw);
   --secondary-foreground: var(--text);
   --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted-foreground: #78716c;
   --accent: var(--main);
   --accent-foreground: var(--text);
   --destructive: #ef4444;
@@ -50,7 +55,6 @@
   --card: var(--bw);
   --card-foreground: var(--text);
 }
-
 
 body {
   background-color: var(--bg);
