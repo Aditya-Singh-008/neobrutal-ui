@@ -3,40 +3,92 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-export type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
-    src?: string
-    alt?: string
-    fallback?: string
-}
+const AvatarContext = React.createContext<{
+    status: "loading" | "loaded" | "error"
+    setStatus: (status: "loading" | "loaded" | "error") => void
+} | null>(null)
 
-const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
-    ({ className, src, alt, fallback, children, ...props }, ref) => {
-        const [imageError, setImageError] = React.useState(false)
+const Avatar = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+    const [status, setStatus] = React.useState<"loading" | "loaded" | "error">("loading")
 
-        return (
+    return (
+        <AvatarContext.Provider value={{ status, setStatus }}>
             <div
                 ref={ref}
                 className={cn(
-                    "relative inline-flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-base border-2 border-border bg-main text-sm font-bold text-black",
+                    "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-base border-2 border-border bg-bw",
                     className
                 )}
                 {...props}
-            >
-                {src && !imageError ? (
-                    <img
-                        src={src}
-                        alt={alt || "Avatar"}
-                        onError={() => setImageError(true)}
-                        className="h-full w-full object-cover"
-                    />
-                ) : (
-                    <span>{fallback || children}</span>
-                )}
-            </div>
-        )
-    }
-)
+            />
+        </AvatarContext.Provider>
+    )
+})
 Avatar.displayName = "Avatar"
+
+const AvatarImage = React.forwardRef<
+    HTMLImageElement,
+    React.ImgHTMLAttributes<HTMLImageElement>
+>(({ className, src, ...props }, ref) => {
+    const context = React.useContext(AvatarContext)
+    const { setStatus, status } = context || {}
+
+    React.useEffect(() => {
+        if (!src) {
+            setStatus?.("error")
+            return
+        }
+
+        const img = new Image()
+        img.src = src as string
+        img.onload = () => setStatus?.("loaded")
+        img.onerror = () => setStatus?.("error")
+
+        return () => {
+            img.onload = null
+            img.onerror = null
+        }
+    }, [src, setStatus])
+
+    if (status === "error" && context) return null
+
+    return (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+            ref={ref}
+            src={src}
+            alt={props.alt || "Avatar"}
+            className={cn("aspect-square h-full w-full object-cover", className)}
+            {...props}
+        />
+    )
+})
+AvatarImage.displayName = "AvatarImage"
+
+const AvatarFallback = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+    const context = React.useContext(AvatarContext)
+    const status = context?.status
+
+    if (status === "loaded") return null
+
+    return (
+        <div
+            ref={ref}
+            className={cn(
+                "flex h-full w-full items-center justify-center rounded-base bg-main text-sm font-bold text-text",
+                className
+            )}
+            {...props}
+        />
+    )
+})
+AvatarFallback.displayName = "AvatarFallback"
 
 export type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
     max?: number
@@ -51,16 +103,12 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
         return (
             <div
                 ref={ref}
-                className={cn("flex items-center -space-x-2", className)}
+                className={cn("flex items-center -space-x-4", className)}
                 {...props}
             >
-                {visible.map((child, index) => (
-                    <div key={index} className="relative">
-                        {child}
-                    </div>
-                ))}
+                {visible}
                 {overflow > 0 && (
-                    <div className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-base border-2 border-border bg-neutral-300 text-sm font-bold">
+                    <div className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-base border-2 border-border bg-bw text-sm font-bold text-text hover:z-10">
                         +{overflow}
                     </div>
                 )}
@@ -70,4 +118,4 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 )
 AvatarGroup.displayName = "AvatarGroup"
 
-export { Avatar, AvatarGroup }
+export { Avatar, AvatarImage, AvatarFallback, AvatarGroup }

@@ -16,18 +16,25 @@
   --color-ring-offset: var(--ring-offset);
   --color-secondaryBlack: #212121;
   --shadow-brutal: 4px 4px 0px 0px var(--border);
+  --color-pastel-purple: var(--pastel-purple);
+  --color-pastel-blue: var(--pastel-blue);
+  --color-pastel-green: var(--pastel-green);
+  --color-pastel-yellow: var(--pastel-yellow);
+  --color-pastel-orange: var(--pastel-orange);
+  --color-pastel-red: var(--pastel-red);
+  --color-pastel-pink: var(--pastel-pink);
 }
 
 :root {
   color-scheme: light;
-  --main: #B6ACE4;
-  --secondary: #FED170;
+  --main: #b6ace4;
+  --secondary: #fed170;
   --soft-pink: #ffc1c6;
-  --soft-green: #Abcf82;
+  --soft-green: #abcf82;
   --tomato: #ff552e;
   --cyan: #22d2ed;
   --overlay: rgba(0, 0, 0, 0.8);
-  --bg: #f4f4f5;
+  --bg: #dfe5f2;
   --bw: #ffffff;
   --blank: #ffffff;
   --text: #0a0a0a;
@@ -35,6 +42,13 @@
   --border: #000000;
   --ring: #000000;
   --ring-offset: #ffffff;
+  --pastel-purple: #a388ee;
+  --pastel-blue: #88aaee;
+  --pastel-green: #97ee88;
+  --pastel-yellow: #eeeb88;
+  --pastel-orange: #eeaa88;
+  --pastel-red: #ee8888;
+  --pastel-pink: #ee88d6;
 
   --radius: 5px;
   --background: var(--bg);
