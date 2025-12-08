@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-bg font-sans text-text selection:bg-pastel-purple selection:text-text">
       <SiteHeader />
-      <main className="pt-20">
+      <main>
         <HeroSection />
         <StatsSection />
         <ComponentsShowcase />
