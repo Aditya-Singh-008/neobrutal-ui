@@ -19,8 +19,8 @@ export default function DocsPage() {
                 </p>
 
                 <p>
-                    This is not a component library you install from npm. Pick a component, copy the code,
-                    and paste it into your project. You own the code. Customize it however you want.
+                    Use the CLI to add components to your project, or copy the code directly.
+                    Either way, you own the code. Customize it however you want.
                 </p>
 
                 <p>

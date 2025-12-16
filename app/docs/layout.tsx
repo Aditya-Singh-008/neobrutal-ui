@@ -13,6 +13,8 @@ const sidebarItems = [
         items: [
             { title: "About", href: "/docs" },
             { title: "Quick Start", href: "/docs/installation" },
+            { title: "CLI", href: "/docs/cli" },
+            { title: "Theming", href: "/docs/theming" },
         ],
     },
     {
