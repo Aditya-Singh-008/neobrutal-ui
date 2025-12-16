@@ -12,7 +12,7 @@
         "type": "git",
         "url": "https://github.com/Bridgetamana/neobrutal-ui"
     },
-    "homepage": "https://neobrutalism.dev",
+    "homepage": "https://neobrutal-ui-mocha.vercel.app/",
     "keywords": [
         "neobrutalism",
         "ui",
