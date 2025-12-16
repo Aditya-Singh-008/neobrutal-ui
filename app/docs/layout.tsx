@@ -68,8 +68,8 @@ const SidebarContent = ({ pathname, onLinkClick }: SidebarContentProps) => (
                             className={cn(
                                 "block rounded-base px-3 py-2 text-base font-medium transition-all",
                                 pathname === item.href
-                                    ? "bg-main border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-                                    : "text-black hover:bg-main hover:translate-x-1"
+                                    ? "bg-main border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-bold"
+                                    : "text-black hover:bg-bg hover:translate-x-1"
                             )}
                         >
                             {item.title}
@@ -104,7 +104,7 @@ export default function DocsLayout({
             </aside>
 
             <div className="sticky top-0 z-40 flex h-16 items-center justify-between border-b-2 border-black bg-main px-6 md:hidden">
-                <Link href="/" className="text-xl font-black italic">
+                <Link href="/" className="text-xl font-bold italic">
                     <div className="flex items-center gap-1">
                         <Image src="/neobrutalui-logo.svg" alt="NeoBrutal UI Logo" width={24} height={24} />
                         <span className="text-lg md:text-xl font-bold italic">NeoBrutal UI</span>

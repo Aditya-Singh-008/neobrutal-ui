@@ -7,7 +7,7 @@ export default function DocsPage() {
     return (
         <div className="space-y-8">
             <header>
-                <h1 className="text-3xl font-black md:text-4xl text-black">Introduction</h1>
+                <h1 className="text-3xl font-bold md:text-4xl text-black">Introduction</h1>
             </header>
 
             <section className="space-y-4">
@@ -24,13 +24,13 @@ export default function DocsPage() {
                 <div className="border-2 border-black bg-bw">
                     <div className="grid grid-cols-1 sm:grid-cols-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-black">
                         <div className="p-6">
-                            <span className="text-2xl font-black text-black">Open Code</span>
+                            <span className="text-2xl font-bold text-black">Open Code</span>
                             <p className="text-base text-black mt-2">
                                 No hidden abstractions or version lock-in. Every line lives in your project.
                             </p>
                         </div>
                         <div className="p-6">
-                            <span className="text-2xl font-black text-black">Accessible</span>
+                            <span className="text-2xl font-bold text-black">Accessible</span>
                             <p className="text-base text-black mt-2">
                                 Built on Radix UI with keyboard navigation and screen reader support.
                             </p>
@@ -38,13 +38,13 @@ export default function DocsPage() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-black border-t-2 border-black">
                         <div className="p-6">
-                            <span className="text-2xl font-black text-black">Two Formats</span>
+                            <span className="text-2xl font-bold text-black">Two Formats</span>
                             <p className="text-base text-black mt-2">
                                 React components for applications. Plain HTML with Tailwind for prototypes.
                             </p>
                         </div>
                         <div className="p-6">
-                            <span className="text-2xl font-black text-black">Tailwind CSS v4</span>
+                            <span className="text-2xl font-bold text-black">Tailwind CSS v4</span>
                             <p className="text-base text-black mt-2">
                                 Styled with CSS variables for straightforward theming and customization.
                             </p>
@@ -98,20 +98,16 @@ export default function DocsPage() {
                 </p>
                 <ul className="space-y-2 text-base text-black">
                     <li>
-                        <Link href="https://www.radix-ui.com" target="_blank" className="font-bold hover:text-main">Radix UI</Link>
-                        <span> — Accessible component primitives</span>
+                        <Link href="https://www.radix-ui.com" target="_blank" className="font-bold underline underline-offset-4 hover:text-main">Radix UI</Link>
                     </li>
                     <li>
-                        <Link href="https://tailwindcss.com" target="_blank" className="font-bold hover:text-main">Tailwind CSS</Link>
-                        <span> — Utility-first CSS framework</span>
+                        <Link href="https://tailwindcss.com" target="_blank" className="font-bold underline underline-offset-4 hover:text-main">Tailwind CSS</Link>
                     </li>
                     <li>
-                        <Link href="https://ui.shadcn.com" target="_blank" className="font-bold hover:text-main">shadcn/ui</Link>
-                        <span> — Inspiration for the copy-paste distribution model</span>
+                        <Link href="https://ui.shadcn.com" target="_blank" className="font-bold underline underline-offset-4 hover:text-main">shadcn/ui</Link>
                     </li>
                     <li>
-                        <Link href="https://phosphoricons.com" target="_blank" className="font-bold hover:text-main">Phosphor Icons</Link>
-                        <span> — Icon library used throughout the documentation</span>
+                        <Link href="https://phosphoricons.com" target="_blank" className="font-bold underline underline-offset-4 hover:text-main">Phosphor Icons</Link>
                     </li>
                 </ul>
             </section>
@@ -121,19 +117,19 @@ export default function DocsPage() {
                 <ul className="space-y-3 text-base">
                     <li className="flex items-center gap-3">
                         <GithubLogoIcon className="h-5 w-5 text-black" weight="bold" />
-                        <Link href="https://github.com/bridgetamana/neobrutal-ui" target="_blank" className="font-bold text-black hover:text-main">
+                        <Link href="https://github.com/bridgetamana/neobrutal-ui" target="_blank" className="font-bold text-black underline underline-offset-4 hover:text-main">
                             Star the repository on GitHub
                         </Link>
                     </li>
                     <li className="flex items-center gap-3">
                         <ChatCircleIcon className="h-5 w-5 text-black" weight="bold" />
-                        <Link href="https://github.com/bridgetamana/neobrutal-ui/issues" target="_blank" className="font-bold text-black hover:text-main">
+                        <Link href="https://github.com/bridgetamana/neobrutal-ui/issues" target="_blank" className="font-bold text-black underline underline-offset-4 hover:text-main">
                             Report bugs or request features
                         </Link>
                     </li>
                     <li className="flex items-center gap-3">
                         <HeartIcon className="h-5 w-5 text-black" weight="bold" />
-                        <Link href="https://github.com/bridgetamana/neobrutal-ui/blob/main/CONTRIBUTING.md" target="_blank" className="font-bold text-black hover:text-main">
+                        <Link href="https://github.com/bridgetamana/neobrutal-ui/blob/main/CONTRIBUTING.md" target="_blank" className="font-bold text-black underline underline-offset-4 hover:text-main">
                             Contribute to the project
                         </Link>
                     </li>

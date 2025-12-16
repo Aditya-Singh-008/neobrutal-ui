@@ -58,16 +58,16 @@ const htmlCode = `<div class="w-full max-w-md">
 
 export default function AccordionPage() {
   return (
-        <div className="space-y-8">
-            <header>
-                <h1 className="text-3xl font-black md:text-4xl text-black">Accordion</h1>
-            </header>
+    <div className="space-y-8">
+      <header>
+        <h1 className="text-3xl font-bold md:text-4xl text-black">Accordion</h1>
+      </header>
 
-            <section className="space-y-4">
-                <p className="text-base text-black">
-                    A vertically stacked set of collapsible sections.
-                </p>
-            </section>      <ComponentPreview code={usageCode} htmlCode={htmlCode}>
+      <section className="space-y-4">
+        <p className="text-base text-black">
+          A vertically stacked set of collapsible sections.
+        </p>
+      </section>      <ComponentPreview code={usageCode} htmlCode={htmlCode}>
         <Accordion type="single" collapsible className="w-full max-w-md">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it styled?</AccordionTrigger>

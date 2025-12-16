@@ -49,7 +49,7 @@ export default function ProgressPage() {
     return (
         <div className="space-y-8">
             <header>
-                <h1 className="text-3xl font-black md:text-4xl text-black">Progress</h1>
+                <h1 className="text-3xl font-bold md:text-4xl text-black">Progress</h1>
             </header>
 
             <section className="space-y-4">
@@ -66,12 +66,12 @@ export default function ProgressPage() {
             </ComponentPreview>
 
             <div className="space-y-4">
-                <h2 className="text-2xl font-black">Installation</h2>
+                <h2 className="text-2xl font-bold">Installation</h2>
                 <CodeBlock code={`No dependencies required.`} language="bash" />
             </div>
 
             <div className="space-y-4">
-                <h2 className="text-2xl font-black">Accessibility</h2>
+                <h2 className="text-2xl font-bold">Accessibility</h2>
                 <ul className="space-y-2 list-disc list-inside font-bold">
                     <li>Uses <code className="bg-neutral-200 px-2 py-1 rounded">role=&quot;progressbar&quot;</code></li>
                     <li>Supports <code className="bg-neutral-200 px-2 py-1 rounded">aria-valuenow</code>, <code className="bg-neutral-200 px-2 py-1 rounded">aria-valuemin</code>, <code className="bg-neutral-200 px-2 py-1 rounded">aria-valuemax</code></li>

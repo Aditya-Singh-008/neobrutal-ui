@@ -53,7 +53,7 @@ export default function ToastPage() {
     return (
         <div className="space-y-8">
             <header>
-                <h1 className="text-3xl font-black md:text-4xl text-black">Toast</h1>
+                <h1 className="text-3xl font-bold md:text-4xl text-black">Toast</h1>
             </header>
 
             <section className="space-y-4">

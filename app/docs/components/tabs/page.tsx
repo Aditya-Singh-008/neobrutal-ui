@@ -88,7 +88,7 @@ export default function TabsPage() {
     return (
         <div className="space-y-8">
             <header>
-                <h1 className="text-3xl font-black md:text-4xl text-black">Tabs</h1>
+                <h1 className="text-3xl font-bold md:text-4xl text-black">Tabs</h1>
             </header>
 
             <section className="space-y-4">
@@ -106,12 +106,12 @@ export default function TabsPage() {
             </ComponentPreview>
 
             <div className="space-y-4">
-                <h2 className="text-2xl font-black">Installation</h2>
+                <h2 className="text-2xl font-bold">Installation</h2>
                 <CodeBlock code={`npm install @radix-ui/react-tabs`} language="bash" />
             </div>
 
             <div className="space-y-4">
-                <h2 className="text-2xl font-black">Accessibility</h2>
+                <h2 className="text-2xl font-bold">Accessibility</h2>
                 <ul className="space-y-2 list-disc list-inside font-bold">
                     <li>Uses <code className="bg-neutral-200 px-2 py-1 rounded">role=&quot;tablist&quot;</code> for container</li>
                     <li>Uses <code className="bg-neutral-200 px-2 py-1 rounded">role=&quot;tab&quot;</code> for triggers</li>

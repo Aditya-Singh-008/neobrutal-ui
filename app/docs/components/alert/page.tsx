@@ -34,7 +34,7 @@ export default function AlertPage() {
     return (
         <div className="space-y-8">
             <header>
-                <h1 className="text-3xl font-black md:text-4xl text-black">Alert</h1>
+                <h1 className="text-3xl font-bold md:text-4xl text-black">Alert</h1>
             </header>
 
             <section className="space-y-4">
