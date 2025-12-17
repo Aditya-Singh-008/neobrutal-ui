@@ -14,7 +14,6 @@ export function SiteFooter() {
                 <div className="flex gap-4 font-medium">
                     <Link href="/docs" className="hover:text-black/80 focus-brutal">Docs</Link>
                     <Link href="https://github.com/bridgetamana/neobrutal-ui" className="hover:text-black/80 focus-brutal">GitHub</Link>
-                    <Link href="https://x.com/bridget_amana" target="_blank" className="hover:text-black/80 focus-brutal">Twitter</Link>
                 </div>
                 <p className="text-sm font-medium">
                     © {new Date().getFullYear()} <Link href="https://x.com/bridget_amana" target="_blank" className="underline decoration-2 underline-offset-2 hover:bg-main">Bridget Amana</Link>. MIT License.
