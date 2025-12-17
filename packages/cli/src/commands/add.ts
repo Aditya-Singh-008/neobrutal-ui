@@ -6,12 +6,11 @@ import { z } from "zod"
 import { logger, highlighter } from "../utils/logger.js"
 import { spinner } from "../utils/spinner.js"
 import { handleError } from "../utils/errors.js"
-import { getConfig, resolveImport, type Config } from "../utils/config.js"
+import { getConfig, type Config } from "../utils/config.js"
 import {
     getRegistryIndex,
     getRegistryItems,
     resolveRegistryDependencies,
-    type RegistryItem,
 } from "../utils/registry.js"
 import { runInit } from "./init.js"
 

@@ -1,4 +1,4 @@
-import { logger, highlighter } from "./logger.js"
+import { logger } from "./logger.js"
 
 export function handleError(error: unknown): void {
     if (typeof error === "string") {

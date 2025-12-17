@@ -5,7 +5,7 @@ import { z } from "zod"
 import { logger, highlighter } from "../utils/logger.js"
 import { spinner } from "../utils/spinner.js"
 import { handleError } from "../utils/errors.js"
-import { getConfig, resolveImport } from "../utils/config.js"
+import { getConfig, type Config } from "../utils/config.js"
 import { getRegistryItem } from "../utils/registry.js"
 
 const diffOptionsSchema = z.object({
@@ -93,7 +93,7 @@ async function runDiff(options: z.infer<typeof diffOptionsSchema>): Promise<void
     }
 }
 
-function resolveFilePath(cwd: string, config: any, filePath: string): string {
+function resolveFilePath(cwd: string, config: Config, filePath: string): string {
     if (filePath.startsWith("components/ui/")) {
         const uiAlias = config.aliases.ui || `${config.aliases.components}/ui`
         return path.resolve(
