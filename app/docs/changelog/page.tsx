@@ -19,7 +19,9 @@ async function getChangelog() {
 function parseChangelog(content: string) {
     if (!content) return []
     
-    const lines = content.split("\n")
+    // Normalize line endings (Windows \r\n to Unix \n)
+    const normalizedContent = content.replace(/\r\n/g, "\n").replace(/\r/g, "\n")
+    const lines = normalizedContent.split("\n")
     const sections: Array<{
         version: string
         date: string
