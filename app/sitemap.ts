@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://neobrutal-ui.vercel.app'
+    const baseUrl = 'https://www.neobrutalui.live'
     const currentDate = new Date()
 
     // Core pages
@@ -9,8 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '',
         '/docs',
         '/docs/installation',
+        '/docs/cli',
         '/docs/theming',
-        '/docs/components',
+        '/docs/accessibility',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: currentDate,

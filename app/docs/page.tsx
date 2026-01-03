@@ -2,6 +2,12 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
 import { ArrowRightIcon, GithubLogoIcon, ChatCircleIcon, HeartIcon } from "@phosphor-icons/react/dist/ssr"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Introduction",
+    description: "NeoBrutal UI is a free, open-source collection of Neobrutalist React components built with Base UI and Tailwind CSS. Accessible, customizable, and copy-paste ready.",
+}
 
 export default function DocsPage() {
     return (
