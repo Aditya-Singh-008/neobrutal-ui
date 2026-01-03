@@ -7,12 +7,18 @@ export const metadata = {
 }
 
 async function getChangelog() {
-    const changelogPath = path.join(process.cwd(), "CHANGELOG.md")
-    const content = fs.readFileSync(changelogPath, "utf-8")
-    return content
+    try {
+        const changelogPath = path.join(process.cwd(), "CHANGELOG.md")
+        const content = fs.readFileSync(changelogPath, "utf-8")
+        return content
+    } catch {
+        return ""
+    }
 }
 
 function parseChangelog(content: string) {
+    if (!content) return []
+    
     const lines = content.split("\n")
     const sections: Array<{
         version: string
@@ -52,7 +58,7 @@ function parseChangelog(content: string) {
             continue
         }
 
-        // Match list items
+        // Match list items (including indented sub-items)
         const itemMatch = line.match(/^- (.+)$/)
         if (itemMatch && currentChangeType) {
             currentChangeType.items.push(itemMatch[1])
@@ -105,56 +111,73 @@ export default async function ChangelogPage() {
             </div>
 
             <div className="space-y-8">
-                {sections.map((section) => (
-                    <div
-                        key={section.version}
-                        className="border-2 border-border rounded-lg bg-white shadow-brutal"
-                    >
-                        <div className="flex items-center justify-between p-4 border-b-2 border-border bg-bg">
-                            <h2 className="text-xl font-bold">
-                                {section.version === "Unreleased" ? (
-                                    <span className="flex items-center gap-2">
-                                        Unreleased
-                                        <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-main border-2 border-border">
-                                            dev
-                                        </span>
-                                    </span>
-                                ) : (
-                                    `v${section.version}`
-                                )}
-                            </h2>
-                            {section.date && (
-                                <time className="text-sm text-black/60 font-mono">
-                                    {section.date}
-                                </time>
-                            )}
-                        </div>
-                        <div className="p-4 space-y-4">
-                            {section.changes.map((change, idx) => (
-                                <div key={idx}>
-                                    <span
-                                        className={`inline-block text-xs font-bold px-2 py-0.5 rounded border-2 ${getTypeColor(change.type)} mb-2`}
-                                    >
-                                        {change.type}
-                                    </span>
-                                    <ul className="space-y-1 ml-4">
-                                        {change.items.map((item, itemIdx) => (
-                                            <li
-                                                key={itemIdx}
-                                                className="text-sm text-black/80 list-disc list-outside ml-4"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item
-                                                        .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-                                                        .replace(/`(.+?)`/g, "<code class='text-xs bg-bg px-1 py-0.5 rounded border border-border'>$1</code>")
-                                                }}
-                                            />
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
+                {sections.length === 0 ? (
+                    <div className="border-2 border-border rounded-lg p-8 bg-white text-center">
+                        <p className="text-black/60">No changelog entries found.</p>
+                        <p className="text-sm text-black/40 mt-2">
+                            View the full changelog on{" "}
+                            <a
+                                href="https://github.com/bridgetamana/neobrutal-ui/blob/main/CHANGELOG.md"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-black"
+                            >
+                                GitHub
+                            </a>
+                        </p>
                     </div>
-                ))}
+                ) : (
+                    sections.map((section) => (
+                        <div
+                            key={section.version}
+                            className="border-2 border-border rounded-lg bg-white shadow-brutal"
+                        >
+                            <div className="flex items-center justify-between p-4 border-b-2 border-border bg-bg">
+                                <h2 className="text-xl font-bold">
+                                    {section.version === "Unreleased" ? (
+                                        <span className="flex items-center gap-2">
+                                            Unreleased
+                                            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-main border-2 border-border">
+                                                dev
+                                            </span>
+                                        </span>
+                                    ) : (
+                                        `v${section.version}`
+                                    )}
+                                </h2>
+                                {section.date && (
+                                    <time className="text-sm text-black/60 font-mono">
+                                        {section.date}
+                                    </time>
+                                )}
+                            </div>
+                            <div className="p-4 space-y-4">
+                                {section.changes.map((change, idx) => (
+                                    <div key={idx}>
+                                        <span
+                                            className={`inline-block text-xs font-bold px-2 py-0.5 rounded border-2 ${getTypeColor(change.type)} mb-2`}
+                                        >
+                                            {change.type}
+                                        </span>
+                                        <ul className="space-y-1 ml-4">
+                                            {change.items.map((item, itemIdx) => (
+                                                <li
+                                                    key={itemIdx}
+                                                    className="text-sm text-black/80 list-disc list-outside ml-4"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: item
+                                                            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+                                                            .replace(/`(.+?)`/g, "<code class='text-xs bg-bg px-1 py-0.5 rounded border border-border'>$1</code>")
+                                                    }}
+                                                />
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                )}
             </div>
 
             <div className="border-2 border-border rounded-lg p-4 bg-bg">
