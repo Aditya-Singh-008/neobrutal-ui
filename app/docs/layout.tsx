@@ -15,6 +15,7 @@ const sidebarItems = [
             { title: "Quick Start", href: "/docs/installation" },
             { title: "CLI", href: "/docs/cli" },
             { title: "Theming", href: "/docs/theming" },
+            { title: "Accessibility", href: "/docs/accessibility" },
             { title: "Changelog", href: "/docs/changelog" },
         ],
     },
