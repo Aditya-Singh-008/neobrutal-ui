@@ -17,7 +17,6 @@ A collection of Neobrutalist components built with Base UI and Tailwind CSS.
 ## Quick Start
 
 Initialize your project and add components:
-
 ```bash
 npx neobrutal init
 npx neobrutal add button card dialog
