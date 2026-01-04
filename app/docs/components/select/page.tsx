@@ -1,7 +1,6 @@
 "use client"
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Label } from "@/components/ui/label"
 import { ComponentPreview } from "@/components/docs/component-preview"
 import { CodeBlock } from "@/components/docs/code-block"
 import { PropsTable } from "@/components/docs/props-table"

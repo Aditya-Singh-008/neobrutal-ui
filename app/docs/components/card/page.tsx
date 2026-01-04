@@ -3,7 +3,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { ComponentPreview } from "@/components/docs/component-preview"
 import { CodeBlock } from "@/components/docs/code-block"
-import { PropsTable } from "@/components/docs/props-table"
 
 const usageCode = `import {
   Card,

@@ -1,10 +1,9 @@
 "use client"
 
-import { Toaster, toast } from "sonner"
+import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { ComponentPreview } from "@/components/docs/component-preview"
 import { CodeBlock } from "@/components/docs/code-block"
-import { PropsTable } from "@/components/docs/props-table"
 
 const usageCode = `<Button
   variant="neutral"

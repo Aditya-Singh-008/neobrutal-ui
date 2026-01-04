@@ -3,7 +3,6 @@
 import { Skeleton } from "@/components/ui/skeleton"
 import { ComponentPreview } from "@/components/docs/component-preview"
 import { CodeBlock } from "@/components/docs/code-block"
-import { PropsTable } from "@/components/docs/props-table"
 
 const usageCode = `<div className="flex items-center gap-4">
   <Skeleton className="h-12 w-12 rounded-full" />
