@@ -281,7 +281,7 @@ export function cn(...inputs: ClassValue[]) {
  * Includes @theme inline block for Tailwind v4 compatibility.
  */
 const NEOBRUTAL_CSS_VARIABLES = `
-/* NeoBrutal UI - Tailwind v4 Theme */
+/* Neobrutal UI - Tailwind v4 Theme */
 @theme inline {
   --color-background: var(--bg);
   --color-foreground: var(--black);

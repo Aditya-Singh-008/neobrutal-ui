@@ -1,6 +1,6 @@
 # neobrutal-ui
 
-CLI for adding NeoBrutal UI components to your project.
+CLI for adding Neobrutal UI components to your project.
 
 ## Usage
 

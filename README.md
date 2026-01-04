@@ -1,14 +1,12 @@
-> Still a work in progress
+# Neobrutal UI
+
+![Neobrutalism UI Components Preview](public/neobrutal-preview.png)
 
 [![npm version](https://img.shields.io/npm/v/neobrutal?style=flat-square)](https://www.npmjs.com/package/neobrutal)
 [![License](https://img.shields.io/github/license/Bridgetamana/neobrutal-ui?style=flat-square)](https://github.com/Bridgetamana/neobrutal-ui/blob/main/license.md)
 [![Contributors](https://img.shields.io/github/contributors/Bridgetamana/neobrutal-ui?style=flat-square)](https://github.com/Bridgetamana/neobrutal-ui/graphs/contributors)
 
-# NeoBrutal UI
-
-![NeoBrutal UI Components Preview](public/neobrutal-preview.png)
-
-A collection of Neobrutalist components built with Base UI and Tailwind CSS.
+A collection of neobrutalism-styled components built with Base UI and Tailwind CSS.
 
 ## Documentation
 
@@ -52,7 +50,8 @@ Or copy the code directly from the docs.
 
 ## Contributing
 
-We welcome contributions. Please read our [Contributing Guide](CONTRIBUTING.md) before submitting a Pull Request.
+We welcome contributions. Read our [Contributing Guide](CONTRIBUTING.md) before submitting a Pull Request.
+Please adhere to this project's [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md).
 
 ## License
 

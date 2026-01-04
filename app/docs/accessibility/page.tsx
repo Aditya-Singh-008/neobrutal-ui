@@ -11,7 +11,7 @@ export default function AccessibilityPage() {
 
             <section className="space-y-4">
                 <p className="text-base text-black">
-                    NeoBrutal UI is built with accessibility as a core principle. All interactive components are designed to meet WCAG 2.1 AA standards while maintaining the bold Neobrutalist aesthetic.
+                    Neobrutal UI is built with accessibility as a core principle. All interactive components are designed to meet WCAG 2.1 AA standards while maintaining the bold Neobrutalist aesthetic.
                 </p>
             </section>
 

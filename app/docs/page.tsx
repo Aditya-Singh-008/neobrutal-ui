@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Introduction",
-    description: "NeoBrutal UI is a free, open-source collection of Neobrutalist React components built with Base UI and Tailwind CSS. Accessible, customizable, and copy-paste ready.",
+    description: "Neobrutal UI is a free, open-source collection of Neobrutalist React components built with Base UI and Tailwind CSS. Accessible, customizable, and copy-paste ready.",
 }
 
 export default function DocsPage() {
@@ -18,7 +18,7 @@ export default function DocsPage() {
 
             <section className="space-y-4">
                 <p className="text-base text-black leading-relaxed">
-                    NeoBrutal UI bridges the gap between raw Neobrutalist aesthetics and structured accessibility. Each component is built on Base UI primitives, ensuring proper keyboard navigation, focus management, and ARIA support out of the box.
+                    Neobrutal UI bridges the gap between raw Neobrutalist aesthetics and structured accessibility. Each component is built on Base UI primitives, ensuring proper keyboard navigation, focus management, and ARIA support out of the box.
                 </p>
                 <p className="text-base text-black leading-relaxed">
                     Components are distributed via CLI or direct copy-paste. There is no npm package to install. You own the code, customize it freely, and never worry about breaking changes from upstream updates.
@@ -26,7 +26,7 @@ export default function DocsPage() {
             </section>
 
             <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-black">Why NeoBrutal UI</h2>
+                <h2 className="text-2xl font-bold text-black">Why Neobrutal UI</h2>
                 <div className="border-2 border-black bg-bw">
                     <div className="grid grid-cols-1 sm:grid-cols-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-black">
                         <div className="p-6">
@@ -67,7 +67,7 @@ export default function DocsPage() {
                             Is this a component library I install from npm?
                         </AccordionTrigger>
                         <AccordionContent className="text-base text-black">
-                            No. NeoBrutal UI uses a CLI to copy component source code directly into your project. You own and control every file.
+                            No. Neobrutalism UI uses a CLI to copy component source code directly into your project. You own and control every file.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
@@ -100,7 +100,7 @@ export default function DocsPage() {
             <section className="space-y-4">
                 <h2 className="text-2xl font-bold text-black">Credits</h2>
                 <p className="text-base text-black leading-relaxed">
-                    NeoBrutal UI is built on the work of several open source projects and design systems.
+                    Neobrutal UI is built on the work of several open source projects and design systems.
                 </p>
                 <ul className="space-y-2 text-base text-black">
                     <li>

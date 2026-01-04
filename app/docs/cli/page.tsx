@@ -12,7 +12,7 @@ export default function CLIPage() {
             <section className="space-y-4">
                 <h2 className="text-2xl font-bold text-black">init</h2>
                 <p className="text-base text-black">
-                    Set up your project for NeoBrutal UI. Creates the configuration file, installs base dependencies, and adds the utility functions.
+                    Set up your project for Neobrutal UI. Creates the configuration file, installs base dependencies, and adds the utility functions.
                 </p>
                 <CodeBlock code={`npx neobrutal init`} language="bash" />
 

@@ -185,14 +185,14 @@ const searchItems: SearchItem[] = [
     // Documentation
     {
         name: "Getting Started",
-        description: "Learn how to get started with NeoBrutal UI.",
+        description: "Learn how to get started with Neobrutal UI.",
         href: "/docs",
         keywords: ["start", "intro", "begin", "overview"],
         category: "docs",
     },
     {
         name: "Installation",
-        description: "How to install NeoBrutal UI in your project.",
+        description: "How to install Neobrutal UI in your project.",
         href: "/docs/installation",
         keywords: ["setup", "install", "npm", "pnpm"],
         category: "docs",
@@ -206,7 +206,7 @@ const searchItems: SearchItem[] = [
     },
     {
         name: "Changelog",
-        description: "All notable changes to NeoBrutal UI.",
+        description: "All notable changes to Neobrutal UI.",
         href: "/docs/changelog",
         keywords: ["changelog", "releases", "updates", "versions", "history"],
         category: "docs",

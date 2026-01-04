@@ -35,11 +35,11 @@ export function HeroSection() {
         <section className="relative pt-20 pb-0 md:pt-32 overflow-hidden min-h-dvh min-h-vh flex flex-col justify-center">
             <div className="container mx-auto px-4 md:px-8 text-center relative z-10 mb-10">
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[0.9]">
-                    Neobrutalist <br />
+                    Neobrutalism <br />
                     Components
                 </h1>
                 <p className="text-lg md:text-xl font-medium max-w-2xl mx-auto mb-6 text-black">
-                    A collection of Neobrutalist components built with Base UI and Tailwind CSS.
+                    A collection of Neobrutalism components built with Base UI and Tailwind CSS.
                 </p>
                 <Link href="/docs/installation">
                     <Button className="h-14 px-8 text-lg font-bold shadow-brutal hover:bg-main">

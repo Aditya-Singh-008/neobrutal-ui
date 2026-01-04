@@ -2,8 +2,8 @@ import fs from "fs"
 import path from "path"
 
 export const metadata = {
-    title: "Changelog - NeoBrutal UI",
-    description: "All notable changes to NeoBrutal UI.",
+    title: "Changelog - Neobrutal UI",
+    description: "All notable changes to Neobrutal UI.",
 }
 
 async function getChangelog() {
@@ -108,7 +108,7 @@ export default async function ChangelogPage() {
             <div>
                 <h1 className="text-3xl font-bold mb-2">Changelog</h1>
                 <p className="text-black/70">
-                    All notable changes to NeoBrutal UI are documented here.
+                    All notable changes to Neobrutal UI are documented here.
                 </p>
             </div>
 

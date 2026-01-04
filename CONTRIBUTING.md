@@ -1,6 +1,6 @@
-# Contributing to NeoBrutal UI
+# Contributing to Neobrutal UI
 
-Thank you for your interest in contributing to NeoBrutal UI. This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to Neobrutal UI. This document provides guidelines and instructions for contributing.
 
 ## Code of Conduct
 

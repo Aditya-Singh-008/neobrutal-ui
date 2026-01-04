@@ -72,8 +72,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Initial release of NeoBrutal UI
-- **Components**: 22 neobrutalist UI components
+- Initial release of Neobrutal UI
+- **Components**: 22 Neobrutalism UI components
   - Accordion, Alert, Avatar, Badge, Breadcrumb, Button, Card
   - Checkbox, Dialog, Input, Label, Pagination, Popover
   - Progress, Radio Group, Select, Skeleton, Slider
