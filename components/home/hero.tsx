@@ -33,7 +33,7 @@ const Marquee = ({ className, children }: { className?: string, children: React.
 export function HeroSection() {
     return (
         <section className="relative pt-20 pb-0 md:pt-32 overflow-hidden min-h-dvh min-h-vh flex flex-col justify-center">
-            <div className="container mx-auto px-4 md:px-8 text-center relative z-10 mb-10">
+            <div className="container mx-auto px-4 md:px-8 text-center relative mb-10">
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[0.9]">
                     Neobrutalism <br />
                     Components

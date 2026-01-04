@@ -110,7 +110,7 @@ export default function DocsLayout({
                 <Link href="/" className="text-xl font-bold italic">
                     <div className="flex items-center gap-1">
                         <Image src="/neobrutalui-logo.svg" alt="Neobrutalism UI Logo" width={24} height={24} />
-                        <span className="text-lg md:text-xl font-bold italic">Neobrutal UI</span>
+                        <span className="text-lg md:text-xl font-bold">Neobrutal UI</span>
                     </div>
                 </Link>
                 <button
