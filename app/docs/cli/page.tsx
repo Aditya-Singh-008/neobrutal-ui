@@ -113,7 +113,7 @@ npx neobrutal diff button`} language="bash" />
                 </p>
 
                 <CodeBlock code={`{
-  "$schema": "https://neobrutal-ui.vercel.app/schema.json",
+  "$schema": "https://www.neobrutalui.live/schema.json",
   "style": "default",
   "tailwind": {
     "config": "tailwind.config.js",
