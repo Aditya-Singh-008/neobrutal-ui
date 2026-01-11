@@ -1,11 +1,6 @@
-[![npm version](https://img.shields.io/npm/v/neobrutal?style=flat-square)](https://www.npmjs.com/package/neobrutal)
-[![License](https://img.shields.io/github/license/Bridgetamana/neobrutal-ui?style=flat-square)](https://github.com/Bridgetamana/neobrutal-ui/blob/main/LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/Bridgetamana/neobrutal-ui?style=flat-square)](https://github.com/Bridgetamana/neobrutal-ui/graphs/contributors)
+# Neobrutal UI
 
-> Still a work in progress
-
-# NeoBrutal UI
-
+![Neobrutalism UI Components Preview](public/neobrutal-preview.png)
 
 [![npm version](https://img.shields.io/npm/v/neobrutal?style=flat-square)](https://www.npmjs.com/package/neobrutal)
 [![License](https://img.shields.io/github/license/Bridgetamana/neobrutal-ui?style=flat-square)](https://github.com/Bridgetamana/neobrutal-ui/blob/main/license.md)
