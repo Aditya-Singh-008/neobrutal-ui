@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { CodeBlock } from "@/components/docs/code-block"
 
 export default function ThemingPage() {
@@ -99,68 +100,38 @@ export default function ThemingPage() {
                 <div className="border-2 border-black divide-y-2 divide-black">
                     <div className="p-5 bg-bw">
                         <div className="flex items-center gap-3 mb-3">
-                            <div className="w-6 h-6 border-2 border-black bg-black"></div>
-                            <h3 className="font-bold text-black text-lg">Monochrome</h3>
+                            <div className="w-6 h-6 border-2 border-black bg-[#97ee88]"></div>
+                            <h3 className="font-bold text-black text-lg">Mint</h3>
                         </div>
                         <CodeBlock code={`:root {
-  --main: #000000;
-  --bg: #ffffff;
+  --main: #97ee88;
+  --bg: #eefbec;
 }`} language="css" />
                     </div>
 
                     <div className="p-5 bg-bw">
                         <div className="flex items-center gap-3 mb-3">
-                            <div className="w-6 h-6 border-2 border-black bg-pink-500"></div>
-                            <h3 className="font-bold text-black text-lg">Hot Pink</h3>
+                            <div className="w-6 h-6 border-2 border-black bg-[#fed170]"></div>
+                            <h3 className="font-bold text-black text-lg">Lemon</h3>
                         </div>
                         <CodeBlock code={`:root {
-  --main: #ec4899;
-  --bg: #fdf2f8;
-}`} language="css" />
-                    </div>
-
-                    <div className="p-5 bg-bw">
-                        <div className="flex items-center gap-3 mb-3">
-                            <div className="w-6 h-6 border-2 border-black bg-yellow-300"></div>
-                            <h3 className="font-bold text-black text-lg">Sunshine</h3>
-                        </div>
-                        <CodeBlock code={`:root {
-  --main: #fde047;
-  --bg: #fefce8;
+  --main: #fed170;
+  --bg: #fffbf0;
 }`} language="css" />
                     </div>
                 </div>
             </section>
 
-            <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-black">Design Principles</h2>
-                <div className="border-2 border-black grid sm:grid-cols-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-black">
-                    <div className="p-4 bg-bw">
-                        <h3 className="font-bold text-black text-lg mb-1">High Contrast</h3>
-                        <p className="text-base text-black">
-                            Keep borders and text dark against light backgrounds for readability.
-                        </p>
-                    </div>
-                    <div className="p-4 bg-bw">
-                        <h3 className="font-bold text-black text-lg mb-1">Bold Colors</h3>
-                        <p className="text-base text-black">
-                            Use saturated, vibrant colors. Muted tones weaken the aesthetic.
-                        </p>
-                    </div>
-                </div>
-                <div className="border-2 border-black grid sm:grid-cols-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-black">
-                    <div className="p-4 bg-bw">
-                        <h3 className="font-bold text-black text-lg mb-1">Hard Shadows</h3>
-                        <p className="text-base text-black">
-                            No blur. The offset shadow is a defining characteristic.
-                        </p>
-                    </div>
-                    <div className="p-4 bg-bw">
-                        <h3 className="font-bold text-black text-lg mb-1">Thick Borders</h3>
-                        <p className="text-base text-black">
-                            Use 2px minimum. Thin lines break the brutalist look.
-                        </p>
-                    </div>
+            <section className="border-2 border-black bg-bw">
+                <div className="grid grid-cols-1 sm:grid-cols-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-black">
+                    <Link href="/docs/cli" className="block p-3 hover:bg-main">
+                        <span className="text-lg font-bold">CLI Reference</span>
+                        <p className="truncate">All available commands and options</p>
+                    </Link>
+                    <Link href="/docs/accessibility" className="block p-3 hover:bg-main text-right">
+                        <span className="text-lg font-bold">Accessibility</span>
+                        <p className="truncate">Learn about how neobrutal ui is built with accessibility in mind</p>
+                    </Link>
                 </div>
             </section>
         </div>
