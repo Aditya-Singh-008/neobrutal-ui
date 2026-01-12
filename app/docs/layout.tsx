@@ -7,6 +7,7 @@ import { useState } from "react"
 import { ListIcon, XIcon } from "@phosphor-icons/react"
 import { Logo } from "@/components/logo"
 import { ColorThemePicker } from "@/components/home/color-theme-picker"
+import { CommandSearch } from "@/components/command-search"
 
 const sidebarItems = [
     {
@@ -109,12 +110,15 @@ export default function DocsLayout({
                 <Link href="/">
                     <Logo />
                 </Link>
+                <div className="flex items-center gap-10">
+                <CommandSearch />
                 <button
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                     className="p-2 focus-brutal cursor-pointer"
                 >
                     {isSidebarOpen ? <XIcon size={28} weight="bold" /> : <ListIcon size={28} weight="bold" />}
                 </button>
+                </div>
             </div>
 
             {isSidebarOpen && (
