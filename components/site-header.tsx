@@ -20,10 +20,10 @@ export function SiteHeader() {
                     <Link href="/docs" className="hover:text-black/80  focus-brutal">Docs</Link>
                     <Link href="https://github.com/bridgetamana/neobrutal-ui" target="_blank" className="hover:text-black/80  focus-brutal">Github</Link>
                 </nav>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-8 md:gap-2 lg:gap-4">
                     <CommandSearch />
-                    <Link href="/docs/components/accordion" aria-label="Explore Components">
-                        <Button className="hidden lg:flex font-bold shadow-brutal hover:bg-main">
+                    <Link href="/docs/components/accordion" aria-label="Explore Components" className="hidden lg:flex ">
+                        <Button className="font-bold shadow-brutal hover:bg-main">
                             Explore Components
                         </Button>
                     </Link>
@@ -32,7 +32,7 @@ export function SiteHeader() {
                         className="lg:hidden p-2 focus-brutal cursor-pointer"
                         aria-label="Toggle menu"
                     >
-                        {isMenuOpen ? <XIcon size={28} weight="bold" /> : <ListIcon size={28} weight="bold" />}
+                        {isMenuOpen ? <XIcon size={24} weight="bold" /> : <ListIcon size={24} weight="bold" />}
                     </button>
                 </div>
             </div>
